@@ -1,35 +1,10 @@
-import { Skeleton } from "@mui/material";
-import { useQuery } from "@tanstack/react-query";
-import { DataGrid, GridColDef } from "@mui/x-data-grid";
-import { fetchData } from "../../../utils/fetchData";
+import { DataGrid } from "@mui/x-data-grid";
 
-const columns: GridColDef[] = [
-  { field: "name", headerName: "Name", width: 100 },
-  { field: "count", headerName: "Count of Related Posts", width: 300 },
-];
-
-const Table = () => {
-  const { isPending, isError, data, error } = useQuery({
-    queryKey: ["tags"],
-    queryFn: fetchData,
-  });
-
-  if (isPending) {
-    return (
-      <>
-        <Skeleton variant="rectangular" className="table" />
-      </>
-    );
-  }
-
-  if (isError) {
-    return <span>Error: {error.message}</span>;
-  }
-
+const Table = ({ rows, columns }) => {
   return (
     <div className="table">
       <DataGrid
-        rows={data.items.map((el, i) => {
+        rows={rows.map((el, i) => {
           return {
             name: el.name,
             count: el.count,
