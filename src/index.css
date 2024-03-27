@@ -1,8 +1,9 @@
-body{
-  display:flex;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-table{
-  display:flex;
-  
+table {
+  width: 100%;
 }
