@@ -1,7 +1,14 @@
 // import { useState,useEffect } from 'react'
 
+import { Skeleton } from "@mui/material";
 import "./App.css";
 import { useQuery } from "@tanstack/react-query";
+import { DataGrid, GridColDef } from "@mui/x-data-grid";
+
+const columns: GridColDef[] = [
+  { field: "name", headerName: "Name", width: 100 },
+  { field: "count", headerName: "Count of Related Posts", width: 300 },
+];
 
 const fetchData = async () => {
   const response = await fetch(
@@ -13,15 +20,34 @@ const fetchData = async () => {
 };
 
 function App() {
-  // const [posts, setPosts] = useState(null)
-
   const { isPending, isError, data, error } = useQuery({
     queryKey: ["tags"],
     queryFn: fetchData,
   });
 
   if (isPending) {
-    return <span>Loading...</span>;
+    return (
+      <>
+        <Skeleton
+          animation="wave"
+          variant="rectangular"
+          width={210}
+          height={60}
+        />
+        <Skeleton
+          animation="wave"
+          variant="rectangular"
+          width={210}
+          height={60}
+        />
+        <Skeleton
+          animation="wave"
+          variant="rectangular"
+          width={210}
+          height={60}
+        />
+      </>
+    );
   }
 
   if (isError) {
@@ -29,11 +55,25 @@ function App() {
   }
 
   return (
-    <ul>
-      {data.items.map((el, i) => (
-        <li key={i++}>{el.name}</li>
-      ))}
-    </ul>
+    <div style={{ height: 400, width: "100%" }}>
+      <DataGrid
+        rows={data.items.map((el, i) => {
+          return {
+            name: el.name,
+            count: el.count,
+            id: i++,
+          };
+        })}
+        columns={columns}
+        initialState={{
+          pagination: {
+            paginationModel: { page: 0, pageSize: 5 },
+          },
+        }}
+        pageSizeOptions={[5, 10]}
+        checkboxSelection
+      />
+    </div>
   );
 }
 
