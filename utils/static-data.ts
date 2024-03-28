@@ -2,8 +2,24 @@ import { GridColDef } from "@mui/x-data-grid";
 import { TableProps } from "./types";
 
 export const columns: GridColDef[] = [
-  { field: "name", headerName: "Name", width: 100 },
-  { field: "count", headerName: "Count of Related Posts", width: 300 },
+  {
+    field: "name",
+    headerName: "Name",
+    width: 200,
+    headerClassName: "header",
+    headerAlign: "center",
+    align: "center",
+    cellClassName: "cell",
+  },
+  {
+    field: "count",
+    headerName: "Count of Related Posts",
+    width: 200,
+    headerClassName: "header",
+    cellClassName: "cell",
+    align:"center",
+    headerAlign: "center",
+  },
 ];
 
 export const mockedRows: TableProps["rows"] = [

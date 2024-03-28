@@ -1,9 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  color:white;
+  font-family: 'Roboto', sans-serif;
+}
+html {
+  height: 100%;
+}
 body {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #101418;
+  color: white;
+}
+/* stretch children */
+.table {
+  position: absolute;
+  display:flex;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
 }
 
-table {
-  width: 100%;
+.header {
+  background-color: #101418;
+  color: white;
+}
+
+.cell {
+  color: white;
+  background-color: #221e2c;
+}
+
+.MuiDataGrid-footerContainer {
+  background-color: #101418;
 }
