@@ -8,11 +8,11 @@ export const columns: GridColDef[] = [
 
 export const mockedRows: TableProps["rows"] = [
   { name: "javascript", count: 2767 },
-  { name: "php", count: 543 },
-  { name: "javascript", count: 677 },
-  { name: "ed", count: 769 },
+  { name: "php", count: 513 },
+  { name: "python", count: 677 },
+  { name: "java", count: 769 },
   { name: "javascript", count: 2767 },
   { name: "php", count: 543 },
-  { name: "c++", count: 677 },
-  { name: "ed", count: 769 },
+  { name: "c++", count: 671 },
+  { name: "ruby", count: 769 },
 ];
