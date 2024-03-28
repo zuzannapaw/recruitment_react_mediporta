@@ -1,16 +1,17 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Table from "../components/table";
-import { columns } from "../App";
+import { columns } from "../../utils/static-data";
+import { TableProps } from "../../utils/types";
 
-const rows = [
-  { name: "javascript", count: "2767" },
-  { name: "php", count: "543" },
-  { name: "javascript", count: "677" },
-  { name: "ed", count: "769" },
-  { name: "javascript", count: "2767" },
-  { name: "php", count: "543" },
-  { name: "c++", count: "677" },
-  { name: "ed", count: "769" },
+const rows: TableProps["rows"] = [
+  { name: "javascript", count: 2767 },
+  { name: "php", count: 543 },
+  { name: "javascript", count: 677 },
+  { name: "ed", count: 769 },
+  { name: "javascript", count: 2767 },
+  { name: "php", count: 543 },
+  { name: "c++", count: 677 },
+  { name: "ed", count: 769 },
 ];
 const meta = {
   title: "Components/Table",

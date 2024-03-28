@@ -1,15 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import Table from "./components/table";
-import { fetchData } from "../utils/fetchData";
+import { fetchData } from "../utils/fetch-data";
 import { Skeleton } from "@mui/material";
-import { GridColDef } from "@mui/x-data-grid";
+import { columns } from "../utils/static-data";
 
-export const columns: GridColDef[] = [
-  { field: "name", headerName: "Name", width: 100 },
-  { field: "count", headerName: "Count of Related Posts", width: 300 },
-];
-
-const App = () => {
+const App: React.FC = (): JSX.Element => {
   const { isPending, isError, data, error } = useQuery({
     queryKey: ["tags"],
     queryFn: fetchData,
