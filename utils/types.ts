@@ -2,7 +2,7 @@ import { GridColDef } from "@mui/x-data-grid";
 
 //COMPONENTS TYPES//
 
-type TableProps = {
+export type TableProps = {
   columns: GridColDef[];
   rows: {
     name: string;
@@ -13,15 +13,11 @@ type TableProps = {
   }[];
 };
 
-export { type TableProps };
-
 //UTIL FUNCTIONS TYPES//
 
-type Tags = {
+export type Tags = {
   items: {
     name: string;
     count: number;
   }[];
 };
-
-export { type Tags };

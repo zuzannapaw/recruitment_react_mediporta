@@ -1,0 +1,33 @@
+{/* Table.mdx */}
+
+import { Canvas, Meta } from "@storybook/blocks";
+
+import * as Table from "./Table.stories";
+
+<Meta of={Table} />
+
+# Table
+
+<Canvas of={Table.Base} />
+
+## Props:
+
+**rows:** `rows: {
+name: string;
+count: number;
+}[];` - Represents data for rows in the table, name of tag and count of related posts.
+
+---
+
+**columns:** `GridColDef[];` - Represents data for columns in the table.
+
+---
+
+## Example usage:
+
+```jsx
+<Table columns=[{ field: "name", headerName: "Name", width: 100 },
+  { field: "count", headerName: "Count of Related Posts", width: 300 }] rows=[ { name: "javascript", count: 2767 },
+  { name: "php", count: 543 },
+  { name: "c++", count: 677 }]/>
+```
