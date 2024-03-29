@@ -17,11 +17,9 @@ import { TableProps } from "../../../utils/types";
 
 //region component
 const Table: React.FC<TableProps> = (props): JSX.Element => {
-  console.log(props.rows);
   return (
     <div className="table">
       <DataGrid
-        sx={{ border: "1px solid #7c51c7", borderRadius: "30px" }}
         rows={props.rows.map(
           (el: { name: string; count: number }, i: number) => {
             return {
