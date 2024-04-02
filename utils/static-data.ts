@@ -5,20 +5,16 @@ export const columns: GridColDef[] = [
   {
     field: "name",
     headerName: "Name",
-    width: 200,
-    // headerClassName: "header",
-    headerAlign: "center",
     align: "center",
-    // cellClassName: "cell",
+    headerAlign: "center",
+    flex: 1,
   },
   {
     field: "count",
     headerName: "Count of Related Posts",
-    width: 250,
-    // headerClassName: "header",
-    // cellClassName: "cell",
-    align:"center",
+    align: "center",
     headerAlign: "center",
+    flex: 2,
   },
 ];
 

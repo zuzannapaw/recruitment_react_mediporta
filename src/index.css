@@ -18,6 +18,19 @@ body {
 
 .table {
   height: 400px;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .table {
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 769px) {
+  .table {
+    max-width: 600px;
+  }
 }
 
 /* .header {
@@ -32,4 +45,14 @@ body {
 
 .MuiDataGrid-footerContainer {
   background-color: #101418;
+} */
+
+/* .MuiTablePagination-selectLabel {
+  position:absolute;
+  top:10px;
+  left:50px;
+}
+
+.MuiInputBase-root{
+  position:absolute;
 } */

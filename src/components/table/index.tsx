@@ -1,4 +1,5 @@
 //region imports
+
 import { DataGrid } from "@mui/x-data-grid";
 import { TableProps } from "../../../utils/types";
 //endregion
@@ -33,9 +34,6 @@ const Table: React.FC<TableProps> = (props): JSX.Element => {
         initialState={{
           pagination: {
             paginationModel: { page: 0, pageSize: 5 },
-           
-            
-            
           },
         }}
         pageSizeOptions={[5, 10]}
