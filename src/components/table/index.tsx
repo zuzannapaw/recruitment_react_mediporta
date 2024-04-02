@@ -5,14 +5,13 @@ import { TableProps } from "../../../utils/types";
 
 /**
  * @name Table
- * @description Table component with two columns displaying tags and count of related posts
+ * @description Table component with two columns displaying tags and count of related posts.
  * @param {TableProps} props
  * @returns {React.ReactElement}
  * @example
- * <Table columns=[{ field: "name", headerName: "Name", width: 100 },
-  { field: "count", headerName: "Count of Related Posts", width: 300 }] rows=[ { name: "javascript", count: 2767 },
-  { name: "php", count: 543 },
-  { name: "c++", count: 677 }]/>
+ * <Table columns={columns} rows={rows}/>
+ * @see {@link ../../../utils/static-data} for analyze data example for props.
+ * 
  */
 
 //region component
@@ -20,7 +19,7 @@ const Table: React.FC<TableProps> = (props): JSX.Element => {
   return (
     <div className="table">
       <DataGrid
-        sx={{ border: 0}}
+        sx={{ border: 0 }}
         rows={props.rows.map(
           (el: { name: string; count: number }, i: number) => {
             return {
@@ -35,7 +34,6 @@ const Table: React.FC<TableProps> = (props): JSX.Element => {
           pagination: {
             paginationModel: { page: 0, pageSize: 5 },
           },
-          
         }}
         pageSizeOptions={[5, 10]}
       />

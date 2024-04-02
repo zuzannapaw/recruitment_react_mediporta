@@ -19,6 +19,18 @@ body {
   );
 }
 
+.skeleton {
+  height: 400px !important;
+}
+
+.heading {
+  text-align: center;
+  padding: 10px;
+  padding-bottom: 20px;
+  color: #505050;
+  letter-spacing: 1px;
+}
+
 .table {
   height: 400px;
 }
@@ -43,12 +55,16 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.css-1essi2g-MuiDataGrid-columnHeaderRow {
-  background: rgba(255, 255, 255, 0.5) !important;
-}
+/* .MuiDataGrid-scrollbarFiller {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+} */
 
-.MuiDataGrid-scrollbarFiller .MuiDataGrid-scrollbarFiller--borderTop {
-  background-color: rgba(255, 255, 255, 0.1);
+/* .MuiDataGrid-scrollbarFiller--borderTop{
+  background-color: rgba(255, 255, 255, 0.1) !important;
+} */
+
+.css-1essi2g-MuiDataGrid-columnHeaderRow {
+  background: rgba(255, 255, 255, 0.4) !important;
 }
 
 /*    scrollbar    */
@@ -59,7 +75,7 @@ body {
 
 .MuiDataGrid-scrollbar::-webkit-scrollbar-track {
   border-radius: 8px;
-  background-color: #e7e7e7;
+  background-color: rgba(255, 255, 255, 0.4);
   border: 1px solid #cacaca;
 }
 

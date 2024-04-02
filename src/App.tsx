@@ -24,14 +24,19 @@ const App: React.FC = (): JSX.Element => {
   if (isPending) {
     return (
       <>
-        <Skeleton variant="rectangular" className="table" />
+        <Skeleton variant="rectangular" className="skeleton" />
       </>
     );
   }
   if (isError) {
     return <span>Error: {error.message}</span>;
   }
-  return <Table columns={columns} rows={data.items} />;
+  return (
+    <>
+      <h2 className="heading">Tags Table</h2>
+      <Table columns={columns} rows={data.items} />
+    </>
+  );
 };
 
 //endregion
