@@ -12,47 +12,62 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #101418; */
-  /* color: white; */
+  background: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 83%
+  );
 }
 
 .table {
   height: 400px;
+}
+#root {
+  max-width: 300px;
   width: 100%;
 }
 
-@media (min-width: 576px) {
-  .table {
-    max-width: 300px;
+@media (min-width: 600px) {
+  #root {
+    max-width: 400px;
   }
 }
 
 @media (min-width: 769px) {
-  .table {
-    max-width: 600px;
+  #root {
+    max-width: 500px;
   }
 }
 
-/* .header {
-  background-color: #101418;
-  color: white;
-}
-
 .cell {
-  color: white;
-  background-color: #221e2c;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.MuiDataGrid-footerContainer {
-  background-color: #101418;
-} */
-
-/* .MuiTablePagination-selectLabel {
-  position:absolute;
-  top:10px;
-  left:50px;
+.css-1essi2g-MuiDataGrid-columnHeaderRow {
+  background: rgba(255, 255, 255, 0.5) !important;
 }
 
-.MuiInputBase-root{
-  position:absolute;
-} */
+.MuiDataGrid-scrollbarFiller .MuiDataGrid-scrollbarFiller--borderTop {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/*    scrollbar    */
+
+.MuiDataGrid-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.MuiDataGrid-scrollbar::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: #e7e7e7;
+  border: 1px solid #cacaca;
+}
+
+.MuiDataGrid-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #505050;
+}
+
+.MuiDataGrid-scrollbarContent {
+  background-color: rgba(255, 255, 255, 0.1);
+}

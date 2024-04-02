@@ -8,6 +8,8 @@ export const columns: GridColDef[] = [
     align: "center",
     headerAlign: "center",
     flex: 1,
+    cellClassName: "cell",
+    headerClassName: "header",
   },
   {
     field: "count",
@@ -15,6 +17,8 @@ export const columns: GridColDef[] = [
     align: "center",
     headerAlign: "center",
     flex: 2,
+    cellClassName: "cell",
+    headerClassName: "header",
   },
 ];
 

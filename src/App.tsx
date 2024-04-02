@@ -28,7 +28,6 @@ const App: React.FC = (): JSX.Element => {
       </>
     );
   }
-
   if (isError) {
     return <span>Error: {error.message}</span>;
   }

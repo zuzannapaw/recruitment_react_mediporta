@@ -5,7 +5,6 @@ export const fetchData = async () => {
     "https://api.stackexchange.com/2.3/tags?order=desc&sort=popular&site=stackoverflow"
   );
   const tags: Tags = await response.json();
-  console.log(tags);
 
   return tags;
 };
