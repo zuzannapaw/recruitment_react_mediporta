@@ -3,7 +3,7 @@ import { Tags } from "./types";
 /**
  * @name fetchData
  * @description Function that fetch tags from API.
- * @returns {Tags} 
+ * @returns {Tags}
  */
 
 export const fetchData = async () => {
