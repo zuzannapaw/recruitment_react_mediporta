@@ -4,6 +4,7 @@ import { Skeleton } from "@mui/material";
 import { fetchData } from "../utils/fetch-data";
 import { columns } from "../utils/static-data";
 import Table from "./components/table";
+import { ErrorModal } from "./components/error-modal";
 //endregion
 
 /**
@@ -23,13 +24,16 @@ const App: React.FC = (): JSX.Element => {
 
   if (isPending) {
     return (
-      <>
-        <Skeleton variant="rectangular" className="skeleton" />
-      </>
+      <div className="skeleton-wrapper">
+        <h2 className="heading">Tags Table</h2>
+        {[...Array(5)].map(() => (
+          <Skeleton variant="rectangular" className="skeleton" height={40} />
+        ))}
+      </div>
     );
   }
   if (isError) {
-    return <span>Error: {error.message}</span>;
+    return <ErrorModal message={error.message} />;
   }
   return (
     <>

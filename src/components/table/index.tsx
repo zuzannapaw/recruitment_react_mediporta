@@ -1,6 +1,7 @@
 //region imports
 import { DataGrid } from "@mui/x-data-grid";
 import { TableProps } from "../../../utils/types";
+
 //endregion
 
 /**
@@ -11,7 +12,7 @@ import { TableProps } from "../../../utils/types";
  * @example
  * <Table columns={columns} rows={rows}/>
  * @see {@link ../../../utils/static-data} for analyze data example for props.
- * 
+ *
  */
 
 //region component
