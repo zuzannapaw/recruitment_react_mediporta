@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import "../../index.css";
-import { ErrorModal } from "../../components/error-modal";
+import ErrorModal from "../../components/error-modal";
 
 const meta = {
   title: "Components/ErrorModal",

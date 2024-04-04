@@ -11,7 +11,6 @@ import { TableProps } from "../../../utils/types";
  * @example
  * <Table columns={columns} rows={rows}/>
  * @see {@link ../../../utils/static-data} for analyze data example for props.
- *
  */
 
 //region component

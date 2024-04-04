@@ -10,11 +10,11 @@ import { ErrorModalProps } from "../../../utils/types";
  * @param {ErrorModalProps} props
  * @returns {React.ReactElement}
  * @example
- * <ErrorModal message="An error has occured" />
+ * <ErrorModal message="An error occured." />
  */
 
 //region component
-export const ErrorModal: React.FC<ErrorModalProps> = (props) => {
+const ErrorModal: React.FC<ErrorModalProps> = (props) => {
   const refresh = () => {
     window.location.reload();
   };
@@ -35,5 +35,6 @@ export const ErrorModal: React.FC<ErrorModalProps> = (props) => {
     </>
   );
 };
-
 //endregion
+
+export default ErrorModal;

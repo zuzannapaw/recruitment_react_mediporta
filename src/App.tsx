@@ -4,9 +4,8 @@ import { Skeleton } from "@mui/material";
 import { createPortal } from "react-dom";
 import { fetchData } from "../utils/fetch-data";
 import { columns } from "../utils/static-data";
+import ErrorModal from "./components/error-modal";
 import Table from "./components/table";
-import { ErrorModal } from "./components/error-modal";
-
 //endregion
 
 /**
@@ -52,6 +51,6 @@ const App: React.FC = (): JSX.Element => {
     </>
   );
 };
-
 //endregion
+
 export default App;
