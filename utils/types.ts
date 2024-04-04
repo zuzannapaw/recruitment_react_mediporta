@@ -20,6 +20,16 @@ export type TableProps = {
   }[];
 };
 
+/**
+ * ErrorModal component types
+ * @typedef {object} ErrorModalProps
+ * @property {string} message - Dynamic error message provided by fetching operation.
+ */
+
+export type ErrorModalProps = {
+  message: string;
+};
+
 //UTIL FUNCTIONS TYPES//
 
 /**

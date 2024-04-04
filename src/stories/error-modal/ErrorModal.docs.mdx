@@ -1,0 +1,23 @@
+{/* ErrorModal.mdx */}
+
+import { Canvas, Meta } from "@storybook/blocks";
+
+import * as ErrorModal from "./ErrorModal.stories";
+
+<Meta of={ErrorModal} />
+
+# ErrorModal
+
+<Canvas of={ErrorModal.Base} />
+
+## Props:
+
+**message:** "The server encountered an unexpected condition that prevented it from fulfilling the request." - Dynamic error message provided by fetching operation.
+
+---
+
+## Example usage:
+
+```jsx
+<ErrorModal message="The server encountered an unexpected condition that prevented it from fulfilling the request." />
+```

@@ -19,20 +19,6 @@ body {
   );
 }
 
-.skeleton-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  width:100%;
-  ;
-}
-
-.MuiSkeleton-root{
-  width:100% !important;
-  margin:5px 0
-}
-
 .heading {
   text-align: center;
   padding: 10px;
@@ -40,6 +26,23 @@ body {
   color: #505050;
   letter-spacing: 1px;
 }
+
+/*    skeleton    */
+
+.skeleton-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.MuiSkeleton-root {
+  width: 100% !important;
+  margin: 5px 0;
+}
+
+/*    table    */
 
 .table {
   height: 400px;
@@ -49,29 +52,9 @@ body {
   width: 100%;
 }
 
-@media (min-width: 600px) {
-  #root {
-    max-width: 400px;
-  }
-}
-
-@media (min-width: 769px) {
-  #root {
-    max-width: 500px;
-  }
-}
-
 .cell {
   background-color: rgba(255, 255, 255, 0.1);
 }
-
-/* .MuiDataGrid-scrollbarFiller {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-} */
-
-/* .MuiDataGrid-scrollbarFiller--borderTop{
-  background-color: rgba(255, 255, 255, 0.1) !important;
-} */
 
 .css-1essi2g-MuiDataGrid-columnHeaderRow {
   background: rgba(255, 255, 255, 0.4) !important;
@@ -98,6 +81,20 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+/*    table media    */
+
+@media (min-width: 600px) {
+  #root {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 769px) {
+  #root {
+    max-width: 500px;
+  }
+}
+
 /*    error modal     */
 
 .modal-overlay {
@@ -119,6 +116,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
   padding: 48px;
   padding-bottom: 20px;
   border-radius: 16px;
@@ -126,7 +124,6 @@ body {
   box-shadow:
     0 20px 25px -5px rgb(0 0 0 / 0.1),
     0 8px 10px -6px rgb(0 0 0 / 0.1);
-  background-color: white;
 }
 
 .error-modal > * {
@@ -144,8 +141,14 @@ body {
   padding: 5px;
 }
 
-.error-message{
-  color:#a0aec0;
+.oops {
+  font-weight: 500;
+  margin-top: 10px;
+  padding-bottom: 0;
+}
+
+.error-message {
+  color: #a0aec0;
   text-align: center;
 }
 
@@ -154,10 +157,11 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+  border: 0;
   border-radius: 6px;
+  margin-top: 10px;
   background-color: #dc2626;
   color: white;
   cursor: pointer;
-  margin-top:10px;
   text-align: center;
 }

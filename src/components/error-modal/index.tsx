@@ -1,34 +1,38 @@
 //region imports
-import { createPortal } from "react-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBomb } from "@fortawesome/free-solid-svg-icons";
-
+import { ErrorModalProps } from "../../../utils/types";
 //endregion
 
-//change div refresh to button!
+/**
+ * @name ErrorModal
+ * @description Modal that is being displayed when an error occurs.
+ * @param {ErrorModalProps} props
+ * @returns {React.ReactElement}
+ * @example
+ * <ErrorModal message="An error has occured" />
+ */
 
 //region component
-export const ErrorModal = (props) => {
-  const portalDiv = document.getElementById("portal")!;
+export const ErrorModal: React.FC<ErrorModalProps> = (props) => {
   const refresh = () => {
     window.location.reload();
   };
 
-  return createPortal(
+  return (
     <>
       <div className="modal-overlay" />
       <div className="error-modal">
         <div className="error-symbol">
-          <FontAwesomeIcon icon={faBomb} />
+          <FontAwesomeIcon icon={faBomb} size="xl" />
         </div>
-        <span style={{ fontWeight: 500 }}>Oops!</span>
+        <span className="oops">Oops!</span>
         <span className="error-message"> Error: {props.message}</span>
-        <div className="refresh" onClick={refresh}>
+        <button className="refresh" onClick={refresh}>
           Refresh page
-        </div>
+        </button>
       </div>
-    </>,
-    portalDiv
+    </>
   );
 };
 
