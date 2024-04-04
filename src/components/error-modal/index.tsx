@@ -18,7 +18,6 @@ export const ErrorModal = (props) => {
     <>
       <div className="modal-overlay" />
       <div className="error-modal">
-        <div onClick={props.close}>X</div>
         <div className="error-symbol">
           <FontAwesomeIcon icon={faBomb} />
         </div>

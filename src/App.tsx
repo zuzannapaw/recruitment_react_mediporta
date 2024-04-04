@@ -5,7 +5,7 @@ import { fetchData } from "../utils/fetch-data";
 import { columns } from "../utils/static-data";
 import Table from "./components/table";
 import { ErrorModal } from "./components/error-modal";
-import { useState } from "react";
+
 //endregion
 
 /**
@@ -18,15 +18,10 @@ import { useState } from "react";
 
 //region component
 const App: React.FC = (): JSX.Element => {
-  const [isOpen, setIsOpen] = useState(false);
   const { isPending, isError, data, error } = useQuery({
     queryKey: ["tags"],
     queryFn: fetchData,
   });
-
-  const onCloseModal = () => {
-    setIsOpen(prevState => !prevState);
-  };
 
   if (isPending) {
     return (
@@ -39,20 +34,7 @@ const App: React.FC = (): JSX.Element => {
     );
   }
   if (isError) {
-    setIsOpen(prevState => !prevState);
-    return (
-      <>
-        <div>
-          <span>We encountered an error while trying to fetch the data</span>
-          <span>
-            Please check your internet connection and try again later.
-          </span>
-        </div>
-        {isOpen && (
-          <ErrorModal message={error.message} close={onCloseModal} />
-        )}
-      </>
-    );
+    return <ErrorModal message={error.message} />;
   }
   return (
     <>
