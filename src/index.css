@@ -57,7 +57,11 @@ body {
 }
 
 .css-1essi2g-MuiDataGrid-columnHeaderRow {
-  background: rgba(255, 255, 255, 0.4) !important;
+  background: #c8c5de !important;
+}
+
+.MuiDataGrid-scrollbarFiller {
+  background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 /*    scrollbar    */
@@ -91,7 +95,7 @@ body {
 
 @media (min-width: 769px) {
   #root {
-    max-width: 500px;
+    max-width: 550px;
   }
 }
 
