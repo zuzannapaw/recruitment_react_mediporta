@@ -1,6 +1,6 @@
 import { GridColDef } from "@mui/x-data-grid";
 
-//COMPONENTS TYPES//
+//    COMPONENTS TYPES    //
 
 /**
  * Table component types
@@ -14,9 +14,6 @@ export type TableProps = {
   rows: {
     name: string;
     count: number;
-    // has_synonyms?: boolean;
-    // is_moderator_only?: boolean;
-    // is_required?: boolean;
   }[];
 };
 
@@ -30,7 +27,7 @@ export type ErrorModalProps = {
   message: string;
 };
 
-//UTIL FUNCTIONS TYPES//
+//    UTIL FUNCTIONS TYPES    //
 
 /**
  * Tags type
